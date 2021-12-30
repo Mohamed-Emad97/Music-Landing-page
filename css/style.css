@@ -1,0 +1,198 @@
+/*Start Global Rules*/
+:root {
+  --main-transition: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*Small Screen*/
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+
+/*Medium Screen*/
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+
+/*Large Screen*/
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+/*End Global Rules*/
+/*Start Header*/
+
+header {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 35px;
+  color: white;
+}
+
+header h1 span {
+  font-size: 45px;
+  color: #ddd;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: fit-content;
+}
+
+header nav ul:first-of-type {
+  margin-bottom: 150px;
+}
+
+header ul li {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  transition: var(--main-transition);
+}
+
+header ul li:hover a {
+  display: inline-block;
+}
+
+header ul li i {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 15px 10px;
+}
+
+header ul li a {
+  color: white;
+  font-size: 15px;
+  display: none;
+  padding: 15px 10px;
+  position: relative;
+  transition: var(--main-transition);
+}
+
+header ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: var(--main-transition);
+}
+
+header ul li a:hover::after {
+  width: calc(100% - 5px);
+}
+
+/*End Header*/
+
+/*Start Content*/
+
+.content {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.2)),
+  url("../images/back-ground.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.content .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  margin-left: 30px;
+}
+
+.content .text h2 {
+  font-size: 80px;
+  line-height: 1.5;
+  font-weight: bold;
+  letter-spacing: 1;
+}
+
+.content .text p {
+  font-size: 30px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.content .links {
+  margin-top: 30px;
+}
+
+.content .links .transparent {
+  margin: 40px 40px 15px 0;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  padding: 15px 10px;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: var(--main-transition);
+}
+
+.content .links .transparent:hover {
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+.content .links .black {
+  background-color: white;
+  font-size: 20px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  color: black;
+  transition: var(--main-transition);
+}
+
+.content .links .black:hover {
+  background-color: #1B1A1F;
+  color: white;
+}
+/*End Content*/
